@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap");
+
+#background {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+body {
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    background: #000;
+    color: #000;
+    overflow: hidden;
+}
+
+.pfp {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #FFFFFF;
+    opacity: 100%;
+}
+
+.center {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    position: absolute;
+    left: 50%;
+}
+
+.members {
+    margin-top: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    z-index: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 55px;
+    width: 128;
+    min-width: 148px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: 0 2px 0px rgba(0, 0, 0, 0.16), 0 4px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.16), 0 4px 0px rgba(0, 0, 0, 0.23);
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    animation: cardFadeIn ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.card+.card {
+    margin-left: 0px;
+}
+
+.card>.username {
+    padding-top: 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+    opacity: 100%;
+}
+
+.card>.username>.dwc {
+    color: #FFFFFF;
+    text-shadow: #ff6e00 0px 1px, white 1px 0px 15px, 1px 1px;
+}
+
+.card>.sub {
+    font-size: smaller;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    color: #fff;
+}
+
+.card>.socials {
+    text-align: center;
+    margin-top: 6px;
+    opacity: 100%;
+}
+
+.card>.socials>a {
+    color: #ffffff;
+    -webkit-transition: color 0.4s ease-in-out;
+}
+
+.card>.socials a+a {
+    margin-left: 5px;
+}
+
+.card>.socials>a:hover {
+    color: #696969;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.card:hover.sub {
+    opacity: 1;
+}
+
+.note {
+    position: fixed;
+    top: 570px;
+    right: 640px;
+    padding: 6px;
+    color: #fff;
+    opacity: 0.35;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    white-space: nowrap;
+}
